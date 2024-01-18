@@ -34,7 +34,7 @@ const Hotel = ({ hotel }) => {
 export const DetailsHotel = () => {
   const [hotels, setHotels] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const hotelsPerPage = 2;
+  const hotelsPerPage = 10;
 
   useEffect(() => {
     fetch("http://localhost:8080/api/hotels")
@@ -82,4 +82,4 @@ export const DetailsHotel = () => {
       </div>
     </div>
   );
-};/*  */
+};

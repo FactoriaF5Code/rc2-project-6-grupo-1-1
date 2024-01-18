@@ -2,11 +2,9 @@ footer {
   background-color: var(--blueHooking);
   color: white;
   text-align: center;
-  margin: 0 auto;
-  padding: 2rem;
-  width: 100%;
+  padding: 3rem;
 }
 
-h3 {
-  font-size: 2rem;
+footer h3 {
+  font-size: 4rem;
 }

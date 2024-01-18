@@ -3,14 +3,14 @@ import { Header } from "./components/header/Header";
 import { Footer } from "./components/footer/Footer";
 import { Form } from "./components/form/Form";
 import { DetailsHotel } from "./components/articles/DetailsHotel";
+import { MainSection } from "./components/mainSection/MainSection";
 
 function App() {
   return (
     <>
       <Header />
-      <DetailsHotel/>
-      <Form />
-      <Footer />
+      <MainSection /> 
+      <Footer /> 
     </>
   );
 }
