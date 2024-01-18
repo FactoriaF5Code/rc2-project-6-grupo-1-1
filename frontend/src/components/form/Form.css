@@ -1,0 +1,102 @@
+.chooseDateContainer {
+  background-color: var(--blueHooking);
+  height: 86.6rem;
+  width: 50rem;
+  margin: 3rem auto;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.chooseDateContainer h2 {
+  color: var(--white);
+  padding: 2rem;
+  font-size: 4rem;
+}
+
+.stars {
+  display: flex;
+  padding-left: 2rem;
+  gap: 1rem;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  color: var(--blueHooking);
+  margin: 2rem;
+  width: auto;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  font-size: 2.5rem;
+  flex: 1;
+}
+
+.formContainer h3 {
+  font-weight: bolder;
+  padding-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+form input {
+  border: none;
+  background-color: var(--blueHooking);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form input[type="date"]:focus {
+  background-color: var(--lightBlue);
+}
+
+form input[type="submit"] {
+  align-self: center;
+
+  font-weight: bold;
+  font-size: 2rem;
+}
+form input[type="submit"]:hover {
+  align-self: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: var(--lightBlue);
+}
+
+@media screen and (max-width: 640px) {
+  .chooseDateContainer {
+    width: 100%;
+  }
+
+  .formContainer {
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .formContainer h3 {
+    padding-bottom: 1rem;
+  }
+
+  form input[type="submit"] {
+    align-self: stretch;
+    font-size: 1.8rem;
+    
+  }
+
+ 
+}
+

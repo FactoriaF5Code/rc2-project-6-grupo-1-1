@@ -24,7 +24,8 @@ Use the maven wrapper to run the server:
 On windows, run: 
 
 ```
-mvnw.cmd spring-boot:run
+jabba use openjdk@1.17.0 
+./mvnw spring-boot:run
 ```
 
 ## Running the tests
