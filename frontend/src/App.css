@@ -1,4 +1,4 @@
-* {
+*{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -16,6 +16,7 @@
 html {
   font-size: 62.5%;
   font-family: Helvetica;
+  
 }
 
 :root {
@@ -27,6 +28,3 @@ html {
   --myFont: Helvetica, Arial, sans-serif;
 }
 
-h2 {
-  background-color: var(--white);
-}
