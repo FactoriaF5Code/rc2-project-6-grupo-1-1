@@ -1,12 +1,10 @@
-import "./App.css"
-import { Header } from "./components/header/Header";
-
-
+import "./App.css";
+import { Form } from "./components/form/Form";
 
 function App() {
   return (
     <>
-      <Header />      
+      <Form />
     </>
   );
 }
