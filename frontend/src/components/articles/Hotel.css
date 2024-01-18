@@ -86,4 +86,27 @@
     justify-content: center;
     align-items: center;
     margin-top: auto;
+    border: none;
+    cursor: pointer;
+}
+
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination button{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background-color: var(--blueHooking);
+    font-family: var(--myFont);
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--white);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
 }
