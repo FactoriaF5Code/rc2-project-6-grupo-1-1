@@ -1,11 +1,26 @@
 import "./Form.css";
+import { useState } from "react";
 
 export const Form = ({ selectedHotel }) => {
+  const [confirmationMessage, setConfirmationMessage] = useState(null);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setConfirmationMessage(
+      <>
+        ¡Reserva confirmada!
+        <br />
+        Gracias por elegir nuestro hotel.
+      </>
+    );
+  };
   return (
     <section className="chooseDateContainer">
-      <h2>{selectedHotel ? `Tu reserva en ${selectedHotel.name}` : "Tu reserva"}</h2>
+      <h2>{selectedHotel ? `${selectedHotel.name}` : "Tu reserva"}</h2>
       <div className="stars">
-        {/* Puedes agregar lógica para mostrar estrellas si es necesario */}
+        <img src="../../../public/Star.svg" alt="star icon" />
+        <img src="../../../public/Star.svg" alt="star icon" />
+        <img src="../../../public/Star.svg" alt="star icon" />
+        <img src="../../../public/Star.svg" alt="star icon" />
       </div>
       <div className="formContainer">
         <h3>Completa tu reserva</h3>
@@ -19,7 +34,16 @@ export const Form = ({ selectedHotel }) => {
             <input type="date" />
           </div>
 
-          <input type="submit" value={"¡Reserva Ahora!"} />
+          <input
+            type="submit"
+            value={"¡Reserva Ahora!"}
+            onClick={handleSubmit}
+          />
+          {confirmationMessage && (
+            <div className="confirmationMessage" style={{ color: "green" }}>
+              {confirmationMessage}
+            </div>
+          )}
         </form>
       </div>
     </section>

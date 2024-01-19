@@ -60,7 +60,9 @@ export const DetailsHotel = ({ setSelectedHotel }) => {
               <h3>{`${hotel.pricePerNight}€`}</h3>
               <p>/por noche</p>
             </div>
-            <button onClick={() => handleReservaClick(hotel)}>¡Reserva ahora!</button>
+            <button onClick={() => handleReservaClick(hotel)}>
+              ¡Reserva ahora!
+            </button>
           </div>
         </article>
       ))}

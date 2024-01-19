@@ -6,9 +6,8 @@ import { useState } from "react";
 export const MainSection = () => {
   const [selectedHotel, setSelectedHotel] = useState(null);
   return (
-
     <main>
-        <DetailsHotel setSelectedHotel={setSelectedHotel} />
+      <DetailsHotel setSelectedHotel={setSelectedHotel} />
       <Form selectedHotel={selectedHotel} />
     </main>
   );

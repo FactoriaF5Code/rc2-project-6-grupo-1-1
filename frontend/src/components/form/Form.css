@@ -1,4 +1,4 @@
- .chooseDateContainer {
+.chooseDateContainer {
   background-color: var(--blueHooking);
   height: 65rem;
   margin: 5rem auto;
@@ -95,10 +95,5 @@ form input[type="submit"]:hover {
   form input[type="submit"] {
     align-self: stretch;
     font-size: 1.8rem;
-    
   }
-
- 
 }
-
- 
