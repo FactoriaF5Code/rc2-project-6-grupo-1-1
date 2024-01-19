@@ -1,15 +1,17 @@
 import "./Header.css";
+import Logo from "../../../public/logoHooking.svg";
+
 
 export const Header = () => {
   return (
-    <header>
+    
       <nav className="nav">
-        <a href="#" className="site title">
-          Hooking
+        <a href="#" className="siteTitle">
+          <img src={Logo} alt="" />
         </a>
-        <button className="contained">Mis Reservas</button>
+        <button className="headerBtn">Mis Reservas</button>
       </nav>
-    </header>
+    
   );
 };
 
