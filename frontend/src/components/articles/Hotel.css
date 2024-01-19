@@ -1,26 +1,25 @@
 .detailsHotel {
   /* outline: 1px solid blue; */
-  width: 100%;
   padding-left: 5rem;
   padding-top: 3rem;
+  margin: 2rem 10rem;
   display: flex;
   gap: 2rem;
   justify-content: space-between;
 }
 
- .fotoHotel {
+.fotoHotel {
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 2rem;
 }
 
-
-
 .infoHotel {
   display: flex;
   flex-direction: column;
   gap: 5rem;
+  width: 60rem;
 }
 
 .nombreHotel {
@@ -33,7 +32,7 @@
 .infoHotel h1 {
   font-size: 2.5rem;
   font-family: var(--myFont);
-  color: var(--blueHooking); 
+  color: var(--blueHooking);
 }
 
 .star {
@@ -41,26 +40,18 @@
 }
 
 .infoHotel p {
-  height: 160px;
+  max-width: 50rem;
   font-size: 2rem;
   font-family: var(--myFont);
   color: var(--blueHooking);
-  align-self: flex-end;
-  text-wrap: pretty;
+  justify-content: space-between;
 }
 
-.precioHotel{
+.precioHotel {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-
 }
-
-/* .precioHotel div {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-} */
 
 .precioHotel h3 {
   font-size: 3rem;
@@ -74,15 +65,17 @@
 
 .precioHotel button {
   background-color: var(--blueHooking);
+  padding: 1rem;
   border-radius: 5px;
   color: var(--white);
   font-family: var(--myFont);
   font-size: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: none;
   cursor: pointer;
+}
+
+.precioHotel button:hover {
+  background-color: var(--lightBlue);
 }
 
 .pagination {
@@ -90,6 +83,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 5rem 0;
 }
 
 .pagination button {
@@ -104,5 +98,4 @@
   border-radius: 10px;
   border: none;
   cursor: pointer;
-} 
-  */
+}

@@ -3,12 +3,9 @@ import "./Form.css";
 export const Form = () => {
   return (
     <section className="chooseDateContainer">
-      <h2>Hotel Número 1</h2>
+      <h2>Tu reserva</h2>
       <div className="stars">
-        <img src="../../../public/Star.svg" alt="star icon" />
-        <img src="../../../public/Star.svg" alt="star icon" />
-        <img src="../../../public/Star.svg" alt="star icon" />
-        <img src="../../../public/Star.svg" alt="star icon" />
+        
       </div>
       <div className="formContainer">
       <h3>Completa tu reserva</h3>      

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Star from "../../../public/star.svg";
 
 const Hotel = ({ hotel }) => {
-  const randomStars = Math.floor(Math.random() * 6);
+  const randomStars = Math.ceil(Math.random() * 5);
 
   return (
     <article className="detailsHotel">
