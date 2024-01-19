@@ -1,40 +1,10 @@
-import "./Hotel.css";
+import Star from "../../../public/Star.svg";
 import { useEffect, useState } from "react";
+import "./Hotel.css";
 
-import Star from "../../../public/star.svg";
-
-const Hotel = ({ hotel }) => {
-  const randomStars = Math.ceil(Math.random() * 5);
-
-  return (
-    <article className="detailsHotel">
-      <img src={hotel.photoUrl} className="fotoHotel" alt="" />
-      <div className="infoHotel">
-        <div className="nombreHotel">
-          <h1>{hotel.name}</h1>
-          <div>
-            {[...Array(randomStars)].map((_, index) => (
-              <img key={index} src={Star} className="star" alt="Estrella" />
-            ))}
-          </div>
-        </div>
-        <p>{hotel.description}</p>
-      </div>
-      <div className="precioHotel">
-        <div>
-          <h3>{`${hotel.pricePerNight}€`}</h3>
-          <p>/por noche</p>
-        </div>
-        <button>¡Reserva ahora!</button>
-      </div>
-    </article>
-  );
-};
-
-export const DetailsHotel = () => {
+export const DetailsHotel = ({ setSelectedHotel }) => {
   const [hotels, setHotels] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const hotelsPerPage = 10;
 
   useEffect(() => {
     fetch("http://localhost:8080/api/hotels")
@@ -43,7 +13,7 @@ export const DetailsHotel = () => {
       .catch((error) => console.error("Error fetching hotels:", error));
   }, []);
 
-  const totalPages = Math.ceil(hotels.length / hotelsPerPage);
+  const totalPages = Math.ceil(hotels.length / 10);
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
@@ -61,14 +31,38 @@ export const DetailsHotel = () => {
     }
   };
 
-  const startIndex = (currentPage - 1) * hotelsPerPage;
-  const endIndex = startIndex + hotelsPerPage;
+  const startIndex = (currentPage - 1) * 10;
+  const endIndex = startIndex + 10;
   const currentHotels = hotels.slice(startIndex, endIndex);
+
+  const handleReservaClick = (hotel) => {
+    setSelectedHotel(hotel);
+  };
 
   return (
     <div>
       {currentHotels.map((hotel) => (
-        <Hotel key={hotel.id} hotel={hotel} />
+        <article key={hotel.id} className="detailsHotel">
+          <img src={hotel.photoUrl} className="fotoHotel" alt="" />
+          <div className="infoHotel">
+            <div className="nombreHotel">
+              <h1>{hotel.name}</h1>
+              <div>
+                {[...Array(Math.ceil(Math.random() * 5))].map((_, index) => (
+                  <img key={index} src={Star} className="star" alt="Estrella" />
+                ))}
+              </div>
+            </div>
+            <p>{hotel.description}</p>
+          </div>
+          <div className="precioHotel">
+            <div>
+              <h3>{`${hotel.pricePerNight}€`}</h3>
+              <p>/por noche</p>
+            </div>
+            <button onClick={() => handleReservaClick(hotel)}>¡Reserva ahora!</button>
+          </div>
+        </article>
       ))}
 
       <div className="pagination">
